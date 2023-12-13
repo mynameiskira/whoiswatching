@@ -25,28 +25,12 @@ kira = '''
      \  \  \  |_|     \ \._,\ '/\    /       
 ------  ---         `--  `"  `--        
 
+[!] Please wait...
 
 '''
+print(kira)
 
 
-
-def animated_wait_message():
-    message = "Please wait"
-    while True:
-        sys.stdout.write("\r" + message)
-        sys.stdout.flush()
-        time.sleep(0.5)  # Réglage de la vitesse de l'animation
-        message += "."
-        if len(message) > 15:  # Limiter le nombre de points pour éviter une surcharge visuelle
-            message = "Please wait"
-
-try:
-    animated_wait_message()
-except KeyboardInterrupt:
-    print("\nProcessus annulé.")
-
-
-print(animated_wait_message)
 
 def get_device_name(ip):
     try:
